@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+@layer components {
+  .news-card {
+    @apply bg-dark-card border border-dark-border rounded-card p-6 transition-all duration-300 hover:border-electric-blue hover:border-opacity-50;
+  }
+
+  .category-tag {
+    @apply inline-block px-3 py-1 bg-electric-blue text-black text-xs font-semibold uppercase rounded-full mb-4;
+  }
+
+  .reaction-btn {
+    @apply px-4 py-2 bg-dark-border text-text-secondary rounded-full text-sm font-medium transition-all duration-200 hover:bg-electric-blue hover:text-black;
+  }
+
+  .reaction-btn.active {
+    @apply bg-electric-blue text-black;
+  }
+
+  .nav-icon {
+    @apply w-6 h-6 transition-colors duration-200;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
