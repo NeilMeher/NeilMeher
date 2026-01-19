@@ -13,16 +13,6 @@
                     "order": "DESCENDING"
                 }
             ]
-        },
-        {
-            "collectionGroup": "news",
-            "queryScope": "COLLECTION",
-            "fields": [
-                {
-                    "fieldPath": "timestamp",
-                    "order": "DESCENDING"
-                }
-            ]
         }
     ],
     "fieldOverrides": []
