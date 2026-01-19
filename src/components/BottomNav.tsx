@@ -13,8 +13,8 @@ export default function BottomNav({ currentFeed, onFeedChange }: BottomNavProps)
   ]
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-black backdrop-blur-nav border-t border-dark-border">
-      <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-around">
+    <nav className="bg-gradient-to-t from-black via-black to-transparent backdrop-blur-nav">
+      <div className="px-4 md:px-6 py-4 flex items-center justify-center gap-8">
         {navItems.map(item => {
           const Icon = item.icon
           const isActive = currentFeed === item.id
@@ -23,13 +23,14 @@ export default function BottomNav({ currentFeed, onFeedChange }: BottomNavProps)
             <button
               key={item.id}
               onClick={() => onFeedChange(item.id as any)}
-              className="p-3 rounded-lg transition-all duration-200 group"
+              className="p-2 rounded-lg transition-all duration-200 group"
               aria-label={item.label}
             >
               <Icon
                 className={`nav-icon ${
                   isActive ? 'text-electric-blue fill-electric-blue' : 'text-text-secondary group-hover:text-white'
                 }`}
+                size={28}
               />
             </button>
           )
