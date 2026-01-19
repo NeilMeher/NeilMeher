@@ -38,7 +38,16 @@ body {
   }
 
   .nav-icon {
-    @apply w-6 h-6 transition-colors duration-200;
+    @apply transition-colors duration-200;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
