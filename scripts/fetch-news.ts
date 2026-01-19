@@ -18,8 +18,16 @@ if (!admin.apps.length) {
             credential: admin.credential.cert(serviceAccount)
         });
     } else {
-        // Local environment (requires GOOGLE_APPLICATION_CREDENTIALS set or default login)
-        app = admin.initializeApp();
+        // Local environment - use service account file from project root
+        const { fileURLToPath } = await import('url');
+        const path = await import('path');
+        const __filename = fileURLToPath(import.meta.url);
+        const __dirname = path.dirname(__filename);
+        const serviceAccountPath = path.join(__dirname, '..', 'service-account.json');
+
+        app = admin.initializeApp({
+            credential: admin.credential.cert(serviceAccountPath)
+        });
     }
 } else {
     app = admin.app();
