@@ -1,13 +1,28 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    
+    // News Collection: 
+    // - Everyone can read
+    // - Only admin (SDK) can create/delete (backend)
+    // - Users can UPDATE reactions only
     match /news/{newsId} {
       allow read: if true;
-      allow write: if false;
+      allow create, delete: if false; // Handled by GitHub Action (Admin SDK bypasses rules)
+      
+      // Allow updating reactions ONLY if that is the only field changing
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['reactions'])
+                    && request.resource.data.reactions.W >= resource.data.reactions.W
+                    && request.resource.data.reactions.mid >= resource.data.reactions.mid
+                    && request.resource.data.reactions.cooked >= resource.data.reactions.cooked
+                    && request.resource.data.reactions.cap >= resource.data.reactions.cap;
     }
+
+    // Reactions Collection (Optional audit trail)
+    // - Anyone can create a reaction log
     match /reactions/{reactionId} {
       allow read: if true;
-      allow write: if false;
+      allow create: if true; // Public can verify they reacted
     }
   }
 }

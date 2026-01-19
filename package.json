@@ -1,0 +1,18 @@
+{
+    "name": "slingshot-backend",
+    "version": "1.0.0",
+    "scripts": {
+        "fetch": "ts-node scripts/fetch-news.ts",
+        "clean": "ts-node scripts/clean-news.ts"
+    },
+    "dependencies": {
+        "firebase-admin": "^11.11.0",
+        "node-fetch": "^3.3.2",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "typescript": "^5.2.2",
+        "ts-node": "^10.9.1",
+        "@types/node": "^20.8.7"
+    }
+}
