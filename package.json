@@ -6,8 +6,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "fetch": "ts-node-esm --project tsconfig.scripts.json scripts/fetch-news.ts",
-    "clean": "ts-node-esm --project tsconfig.scripts.json scripts/clean-news.ts"
+    "build:scripts": "tsc -p tsconfig.scripts.json",
+    "fetch": "npm run build:scripts && node dist_scripts/scripts/fetch-news.js",
+    "clean": "npm run build:scripts && node dist_scripts/scripts/clean-news.js"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
