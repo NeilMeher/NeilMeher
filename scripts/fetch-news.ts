@@ -1,4 +1,4 @@
-import * as admin from 'firebase-admin';
+import admin from 'firebase-admin';
 import fetch from 'node-fetch';
 import * as dotenv from 'dotenv';
 dotenv.config();
