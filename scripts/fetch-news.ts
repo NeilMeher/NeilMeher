@@ -110,7 +110,7 @@ async function processWithGroq(article: NewsArticle): Promise<{ genZHeadline: st
     const userPrompt = `Headline: ${article.title}\nDescription: ${article.description || article.content}`;
 
     const body = {
-        model: "llama-3.1-70b-versatile",
+        model: "llama-3.3-70b-versatile",
         messages: [
             { role: "system", content: systemPrompt },
             { role: "user", content: userPrompt }
@@ -138,7 +138,7 @@ async function processWithGroq(article: NewsArticle): Promise<{ genZHeadline: st
                     continue;
                 }
                 const txt = await res.text();
-                // console.error(`Groq error: ${txt}`);
+                console.error(`Groq error (${res.status}): ${txt.substring(0, 200)}`);
                 return null;
             }
 

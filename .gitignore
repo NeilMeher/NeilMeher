@@ -5,3 +5,6 @@ functions/lib/
 .firebase/
 functions/.env
 *.log
+service-account.json
+dist_scripts/
+.env
