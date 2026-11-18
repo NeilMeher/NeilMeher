@@ -42,6 +42,19 @@ I'm interested in economics, finance, and how we can test claims about AI behavi
 - [Bilingual Economic News Benchmark](https://github.com/NeilMeher/bilingual-econ-benchmark) measures whether extraction preserves figures, units, dates, and direction across 25 English–Hindi release pairs.
 - **12.** [Economic Headlines Reader Study Toolkit](https://github.com/NeilMeher/economic-headlines-reader-study) tests the effect of leading with the change versus the level in 12 matched headline pairs. The published responses are synthetic.
 
+## U.S. finance research
+
+- [M&A Valuation Reconstruction](https://github.com/NeilMeher/ma-valuation-reconstruction) audits eight public cash deals and reconstructs adviser DCF ranges where filings disclose enough inputs.
+- [Barrier Option Monte Carlo](https://github.com/NeilMeher/barrier-option-monte-carlo) benchmarks discrete monitoring and Brownian-bridge corrections against a continuous reference.
+- [FOMC Market Reversals](https://github.com/NeilMeher/fomc-market-reversals) measures when Treasury-yield moves during press conferences reversed the statement-window response.
+- [Merger Spread Lab](https://github.com/NeilMeher/merger-spread-lab) uses sourced dates and observed prices to audit three deal events.
+- [Option Tails and SVI](https://github.com/NeilMeher/option-tails-svi) compares risk-neutral tail estimates on synthetic option quotes with known tail probabilities.
+- [USD/JPY Carry Lab](https://github.com/NeilMeher/usdjpy-carry-lab) replays the August 2024 unwind and examines leverage and margin in resampled returns.
+- [Treasury Yield Forecast](https://github.com/NeilMeher/treasury-yield-forecast) compares dynamic Nelson–Siegel, autoregression, and no-change forecasts on held-out Treasury curves.
+- [Treasury Fire-Sale Simulator](https://github.com/NeilMeher/treasury-fire-sale) models how leverage and dealer capacity affect cascades in a synthetic Treasury market.
+- [Mortgage Convexity](https://github.com/NeilMeher/mortgage-convexity) measures the rate and prepayment sensitivity of an illustrative mortgage pool.
+- [LBO Return Attribution](https://github.com/NeilMeher/lbo-return-attribution) attributes returns in a TaskUs-based hypothetical buyout with synthetic financing.
+
 ## My role and other interests
 
 I chose the project questions and set the evaluation requirements. Codex implemented the projects, assembled or generated the datasets, and ran the checks. Each repository documents its methods and identifies independent review still pending.
