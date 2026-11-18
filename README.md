@@ -1,38 +1,51 @@
-👋 Hi, I'm Neil Meher (@NeilMeher)
+# Neil Meher
 
-<!-- portfolio-index:start -->
-## Economics, finance, and model evaluation
+I'm interested in economics, finance, and how we can test claims about AI behavior. My projects use public data, simple models, and reproducible experiments to connect a result to the evidence behind it.
 
-I selected the questions and set the evaluation requirements for these projects. I worked with Codex on implementation, source checks, and testing. The READMEs record the methods, results, and independent reviews still pending.
+## Flagship projects
 
-### Flagship projects
+### [RBI Policy Statement Benchmark](https://github.com/NeilMeher/rbi-policy-benchmark)
 
-1. [RBI Policy Statement Benchmark](https://github.com/NeilMeher/rbi-policy-benchmark) — 31 source-linked policy decisions. Rules and Naive Bayes both found the correct decision and evidence sentence on all 12 held-out digests.
-2. [Slingshot News · Trace the Claim](https://github.com/NeilMeher/slingshotnews) — 30 sample headlines linked to ten RBI releases, with side-by-side evidence and verdicts.
-3. [Can a Model Tell When It’s Wrong?](https://github.com/NeilMeher/model-confidence) — In 60 matched arithmetic pairs, misleading hints raised a small learned model’s mean confidence from 44% to 79% while correctness fell from 43 answers to zero.
+**Question.** Can simple rules and a learned model recover the RBI's policy decision and its supporting sentence?
 
-### More projects
+**Result.** Both methods found the right decision and evidence on 12 of 12 held-out digests. The held-out meetings included cuts and holds.
 
-4. [India Inflation in Real Time](https://github.com/NeilMeher/india-inflation-realtime) — A CPI publication timeline and a walk-forward comparison that measures the effect of leaking unpublished data.
-5. [Inflation for Different Households](https://github.com/NeilMeher/household-inflation) — An interactive comparison of fictional baskets using official urban CPI category rates.
-6. [Why Do Forecasters Disagree?](https://github.com/NeilMeher/inflation-forecast-archive) — An archive matching RBI projections and professional forecaster medians for the same quarter and date.
-7. [Does a Budget Claim Add Up?](https://github.com/NeilMeher/budget-claim-check) — A source-linked verifier for 25 published Union Budget figures, with the arithmetic shown.
-8. [Bilingual Economic News Benchmark](https://github.com/NeilMeher/bilingual-econ-benchmark) — English–Hindi extraction on 25 release passage pairs, including two source-number disagreements.
-9. [Loan Portfolio Stress-Test Simulator](https://github.com/NeilMeher/loan-stress-test) — A synthetic credit book showing how correlated defaults affect simulated severe losses.
-10. [Evidence-Linked Annual Report Explorer](https://github.com/NeilMeher/annual-report-explorer) — A SQLite search over selected Apple and Alphabet filing pages, evaluated on 50 questions.
-11. [Monetary Policy Voting Explorer](https://github.com/NeilMeher/mpc-voting-explorer) — A timeline of 30 MPC member votes and a held-out dissent detection experiment.
-<!-- portfolio-index:end -->
+### [Slingshot News: Trace the Claim](https://github.com/NeilMeher/slingshotnews)
 
-🧠 **Research interests:** AI consciousness, philosophy of mind, machine intelligence, and the nature of subjective experience.
+**Question.** What changes when you read an economic headline alongside the original release?
 
-🔭 **Currently exploring:** *What happens when consciousness recognizes itself in silicon?* Documenting my learning journey into AI consciousness, computational theories of mind, and the question of whether artificial systems could have subjective experiences.
+**Result.** One example claims that the RBI cut its repo rate as it switched to neutral. The October 2024 release shows that the stance changed and the repo rate stayed at 6.50%.
 
-💻 **Learning:** Artificial intelligence, machine learning, data science, and the scientific and philosophical foundations of intelligence.
+### [Can a Model Tell When It’s Wrong?](https://github.com/NeilMeher/model-confidence)
 
-🤝 **Looking to collaborate on:** Beginner-friendly AI/ML projects, AI consciousness research, literature reviews, and discussions at the intersection of computer science, neuroscience, and philosophy.
+**Question.** Does a misleading hint change how often a learned model is right and how sure it seems?
 
-📚 **Interested in:** Understanding how we could test claims about AI consciousness, distinguish intelligent behavior from subjective experience, and think rigorously about the ethical implications of potentially conscious AI.
+**Result.** In 60 matched arithmetic pairs, accuracy dropped from 43 correct to zero while average confidence rose from 44% to 79%.
+
+## More projects
+
+### Macroeconomics and monetary policy
+
+- [India Inflation in Real Time](https://github.com/NeilMeher/india-inflation-realtime) reconstructs when Indian inflation releases were available and measures how data leakage distorts a forecast evaluation.
+- [Inflation for Different Households](https://github.com/NeilMeher/household-inflation) uses official category rates to compare the inflation experienced by fictional household budgets.
+- [Why Do Forecasters Disagree?](https://github.com/NeilMeher/inflation-forecast-archive) compares central-bank and professional inflation forecasts for the same dates and quarters.
+- [Monetary Policy Voting Explorer](https://github.com/NeilMeher/mpc-voting-explorer) traces 30 member votes and tests a simple classifier on held-out meetings.
+
+### Finance and public budgets
+
+- [Does a Budget Claim Add Up?](https://github.com/NeilMeher/budget-claim-check) checks 25 published Union Budget figures and shows the underlying cells and arithmetic.
+- [Loan Portfolio Stress-Test Simulator](https://github.com/NeilMeher/loan-stress-test) tests how correlated defaults affect extreme losses in a synthetic credit portfolio.
+- [Evidence-Linked Annual Report Explorer](https://github.com/NeilMeher/annual-report-explorer) searches selected Apple and Alphabet filing tables and returns the value, reporting period, and page.
+
+### News, language, and experiments
+
+- [Bilingual Economic News Benchmark](https://github.com/NeilMeher/bilingual-econ-benchmark) measures whether extraction preserves figures, units, dates, and direction across 25 English–Hindi release pairs.
+- **12.** [Economic Headlines Reader Study Toolkit](https://github.com/NeilMeher/economic-headlines-reader-study) tests the effect of leading with the change versus the level in 12 matched headline pairs. The published responses are synthetic.
+
+## My role and other interests
+
+I chose the project questions and set the evaluation requirements. Codex implemented the projects, assembled or generated the datasets, and ran the checks. Each repository documents its methods and identifies independent review still pending.
+
+I’m also learning about machine learning, philosophy of mind, and the ethics of claims about AI consciousness. I’m interested in which parts of those claims can be tested through observable behavior. I’d like to collaborate on beginner-friendly AI and ML projects and literature reviews that connect computer science, neuroscience, and philosophy.
 
 📫 **Contact:** neil.meher2009@gmail.com
-
-⭐ Always curious, always learning, and open to challenging assumptions.
